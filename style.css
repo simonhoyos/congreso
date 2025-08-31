@@ -123,6 +123,17 @@ body{
   transform: skewY(3deg);
 }
 
+@media screen and (width >= 768px) {
+  .band {
+    padding: calc(var(--spacing) * 10) calc(var(--spacing) * 5);
+    transform: skewY(-2deg);
+  }
+
+  .band h2{
+    transform: skewY(2deg);
+  }
+}
+
 .info{
   position: relative;
   top: -35px;
@@ -219,6 +230,22 @@ body{
   text-align: center;
   font-weight: 700;
 }
+
+@media screen and (width >= 768px) {
+  .venues {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+
+  .venue {
+    grid-column: span 1;
+  }
+
+  .venue:not(:last-child){
+    border-bottom: none;
+    border-right: 1px solid var(--white);
+  }
+}
+
 
 .register {
   display: flex;
