@@ -193,7 +193,10 @@ body{
 
 .venue{
   color: var(--white);
+
   padding: 12px 14px;
+
+  grid-column: span 3;
 }
 
 .venue:not(:last-child){
