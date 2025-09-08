@@ -1,9 +1,11 @@
 :root{
   --red: #c1121f;
+  --red-75: #c1121fbf;
   --white: #ffffff;
   --gold: #f3b000;
-  --black: #111;
-  --black-75: #111c;
+  --black: #111111;
+  --black-75: #111111bf;
+  --black-25: #11111140;
   --transparent: rgba(0,0,0,0);
 
   --bg:#f6f3ef;
@@ -237,7 +239,7 @@ body{
   text-align: center;
   font-weight: 700;
 
-  margin-top: 1px;
+  margin-top: calc(var(--spacing) * 2);
 }
 
 .footer-accent{
@@ -345,10 +347,85 @@ body{
   display:block;
 }
 
-/* @media (max-width:720px){ */
-/*   .logos{grid-template-columns:repeat(3,1fr)} */
-/*   .info{grid-template-columns:1fr;} */
-/*   .venues{grid-template-columns:1fr;} */
-/*   .bottom{grid-template-columns:1fr;} */
-/*   .qr{justify-self:center} */
-/* } */
+.speakers-carousel {
+  padding: calc(var(--spacing) * 12) 0;
+  background: var(--black-75);
+  color: var(--white);
+}
+
+.speakers-carousel h2 {
+  text-align: center;
+  font-size: calc(var(--spacing) * 6);
+  margin-bottom: 1.5rem;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-btn {
+  color: var(--white);
+  background: var(--black-25);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing) * 15);
+  height: calc(var(--spacing) * 15);
+  font-size: calc(var(--spacing) * 13);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left:0;
+}
+
+.carousel-btn.next {
+  right:0;
+}
+
+.carousel-image-container {
+  flex: 0 0 180px;
+  margin: 0 12px;
+  text-align: center;
+}
+
+.carousel-track {
+  display:flex;
+  overflow:hidden;
+  scroll-behavior:smooth;
+  padding: 0 calc(var(--spacing) * 3);
+}
+
+.carousel-image {
+  width: calc(var(--spacing) * 65);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.speakers-carousel .carousel-container {
+  overflow: visible;
+}
+
+.speakers-carousel .carousel-track {
+  min-height: 220px;
+  padding: 0 48px;
+}
+
+@media (width >= 900px) {
+  .speakers-carousel .carousel-track {
+    padding: 0;
+  }
+}
+
+@media (width >= 768px) {
+  .carousel-track {
+    padding: 0 calc(var(--spacing) * 6);
+  }
+}
