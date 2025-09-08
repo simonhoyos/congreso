@@ -44,24 +44,42 @@ body{
   overflow: hidden;
 }
 
-.logos{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:18px;
-  align-items:center;
-  padding: 0 28px;
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing) * 4);
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 calc(var(--spacing) * 7);
 }
 
-.logo{
-  height:64px;
-  background:#eee;
-  border:1px solid #ddd;
-  border-radius:6px;
+.logos h3 {
+  font-weight: 500;
+  font-size: calc(var(--spacing) * 3);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+
+.logo {
+  width: calc(var(--spacing) * 20);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:.8rem;
-  color:#666;
+}
+
+.logo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+@media screen and (width >= 768px) {
+  .logo {
+    width: calc(var(--spacing) * 30);
+  }
 }
 
 .title {
