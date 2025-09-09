@@ -1,7 +1,7 @@
 :root{
   --red: #c1121f;
   --red-75: #c1121fbf;
-  --white: #f6f3ef;
+  --white: #ffffff;
   --gold: #f3b000;
   --black: #111111;
   --black-75: #111111bf;
@@ -32,7 +32,7 @@ body{
 .page{
   max-width: 960px;
   margin: 0 auto;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
@@ -120,9 +120,9 @@ body{
 }
 
 .band {
-  margin-top: 32px;
-  background: #1a1a1a;
-  color: #fff;
+  margin-top: calc(var(--spacing) * 8);
+  background: var(--black);
+  color: var(--white);
   padding: calc(var(--spacing) * 7) calc(var(--spacing) * 5);
   border-top: 3px solid var(--gold);
   border-bottom: 3px solid var(--gold);
@@ -344,8 +344,8 @@ body{
 
 .speakers-carousel {
   padding: calc(var(--spacing) * 12) 0;
-  background-color: var(--black-75);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .speakers-carousel h2 {
@@ -362,7 +362,7 @@ body{
 
 .carousel-btn {
   color: var(--white);
-  background-color: var(--black-25);
+  background-color: var(--black-75);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
