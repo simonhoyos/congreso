@@ -429,3 +429,7 @@ body{
     padding: 0 calc(var(--spacing) * 6);
   }
 }
+
+.footer {
+  padding-top: calc(var(--spacing) * 7);
+}
